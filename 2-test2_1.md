@@ -55,7 +55,6 @@ Fes un script que obtingui els dos vocals seleccionats i mostri per pantalla:
             END IF;
         END LOOP;
     END;
-
 ---
 
 ## Pregunta 3
@@ -104,29 +103,29 @@ Les taules son:
 - locations
 
 
-DECLARE
-    v_total_registers NUMBER(5);
-    v_employees_registers NUMBER(5);
-    v_emp_percentage NUMBER(5);
-    v_dep_percentage NUMBER(5);
-    v_loc_percentage NUMBER(5);
-    v_departments_registers NUMBER(5);
-    v_locations_registers NUMBER(5);
-BEGIN
-    -- Count regnums.
-    SELECT COUNT(employee_id) into v_employees_registers FROM employees;
-    SELECT COUNT(department_id) into v_departments_registers FROM DEPARTMENTS;
-    SELECT COUNT(location_id) INTO v_locations_registers FROM LOCATIONS;
-    v_total_registers := v_employees_registers + v_departments_registers + v_locations_registers;
+    DECLARE
+        v_total_registers NUMBER(5);
+        v_employees_registers NUMBER(5);
+        v_emp_percentage NUMBER(5);
+        v_dep_percentage NUMBER(5);
+        v_loc_percentage NUMBER(5);
+        v_departments_registers NUMBER(5);
+        v_locations_registers NUMBER(5);
+    BEGIN
+        -- Count regnums.
+        SELECT COUNT(employee_id) into v_employees_registers FROM employees;
+        SELECT COUNT(department_id) into v_departments_registers FROM DEPARTMENTS;
+        SELECT COUNT(location_id) INTO v_locations_registers FROM LOCATIONS;
+        v_total_registers := v_employees_registers + v_departments_registers + v_locations_registers;
 
-    --Calc. percanteges
-    v_emp_percentage := (v_employees_registers/v_total_registers) * 100;
-    v_dep_percentage := (v_departments_registers/v_total_registers) * 100;
-    v_loc_percentage := (v_locations_registers/v_total_registers) * 100;
+        --Calc. percanteges
+        v_emp_percentage := (v_employees_registers/v_total_registers) * 100;
+        v_dep_percentage := (v_departments_registers/v_total_registers) * 100;
+        v_loc_percentage := (v_locations_registers/v_total_registers) * 100;
 
-    --Display results
-    DBMS_OUTPUT.PUT_LINE('Total employees:'||v_employees_registers||'%. Which is '||v_emp_percentage||' of the total.');
-    DBMS_OUTPUT.PUT_LINE('Total departments: '||v_departments_registers||'%. Which is '||v_dep_percentage||' of the total.');
-    DBMS_OUTPUT.PUT_LINE('Total locations: '||v_locations_registers||'%. Which is '||v_loc_percentage||' of the total.');
-    DBMS_OUTPUT.PUT_LINE('Total registers: '||v_total_registers);
-END;
+        --Display results
+        DBMS_OUTPUT.PUT_LINE('Total employees:'||v_employees_registers||'%. Which is '||v_emp_percentage||' of the total.');
+        DBMS_OUTPUT.PUT_LINE('Total departments: '||v_departments_registers||'%. Which is '||v_dep_percentage||' of the total.');
+        DBMS_OUTPUT.PUT_LINE('Total locations: '||v_locations_registers||'%. Which is '||v_loc_percentage||' of the total.');
+        DBMS_OUTPUT.PUT_LINE('Total registers: '||v_total_registers);
+    END;

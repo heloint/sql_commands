@@ -39,7 +39,6 @@ DELETE FROM new_emps WHERE employee_id IN (SELECT employee_id FROM new_emps WHER
                 DBMS_OUTPUT.PUT_LINE('There are too many registers to assign.');
                 
     END;
-
 ---
 
 #2.
@@ -96,6 +95,7 @@ Modify the following block to handle this exception.
 #4.
 Fix the following block
 
+
     DECLARE
         CURSOR regions_curs IS
         SELECT * FROM regions
@@ -113,9 +113,12 @@ Fix the following block
             END LOOP;
         CLOSE regions_curs;
     END;
+
+
 #5.
 Fix following block adding a non_predefined exception handler to trap the ORA-01400 exception. 
 Name your exception e_null_not_allowed
+
 
     DECLARE
         e_null_not_allowed EXCEPTION;

@@ -33,7 +33,6 @@ Save your code (you will need it later in next practice)
             END LOOP;
         CLOSE c_countries;
     END;
-
 ---
 
 ## 2.
@@ -63,7 +62,6 @@ Write a PL/SQL block to read and display the names of world regions, with a coun
             END LOOP;
         CLOSE c_regions;
     END;
-
 ---
 
 ## 3.
@@ -122,7 +120,6 @@ Use %ROWTYPE and the explicit cursor attribute %ROWCOUNT.
             END LOOP;
         CLOSE c_emps; 
     END;
-
 ---
 
 ## 5.
@@ -146,7 +143,6 @@ Test the block again.
             END LOOP;
         CLOSE c_emps;
     END;
-
 ---
 
 ## 6.
@@ -199,7 +195,6 @@ Test your changes.
 
             END LOOP;
     END;
-
 ---
 
 ## 7.
@@ -281,6 +276,7 @@ Test it again using regions 5 and 30.
             END LOOP;
     END;
 
+
 ---
 
 ## 11.
@@ -358,7 +354,6 @@ After running your code, SELECT from the PROPOSED_RAISES table to view the updat
                 WHERE CURRENT OF c_proposes;
             END LOOP;
     END;
-
 ---
 
 ## 14.
@@ -379,7 +374,6 @@ Test your code, and view the PROPOSED_RAISES table again to check that the rows 
                 WHERE CURRENT OF c_proposes;
             END LOOP;
     END;
-
 ---
 
 ## 15.
@@ -456,7 +450,6 @@ Peter Vargas 2500
                 DBMS_OUTPUT.NEW_LINE;
             END LOOP;
     END;
-
 ---
 
 ## 16.
@@ -481,4 +474,3 @@ Returns the status of the cursor.
 An attribute that processes an exact number of rows or counts the number of rows fetched in a loop.
 
     Resposta 5 --> %ROWCOUNT
-

@@ -26,7 +26,6 @@ You will need to include three UPDATE statements, one for each of the above rule
         SET salary = 3000
         WHERE department_id NOT IN (80, 50);
     END;
-
 ---
 
 # 2.
@@ -44,7 +43,6 @@ Name your procedure get_country_info. Save your procedure definition for later u
         Where country_id = p_country_id;
         DBMS_OUTPUT.PUT_LINE('The country name is '||v_c_name||' and the capital city is '||v_capitol);
     END;
-
 ---
 
 # 3.
@@ -75,6 +73,7 @@ What happens?
 Write a procedure named get_country_count that displays the number of countries in a given region whose highest elevations exceed a given value. 
 The procedure should accept two formal parameters, one for a region_id and the other for an elevation value for comparison. 
 Use DBMS_OUTPUT.PUT_LINE to display the results in a message.
+
 
     CREATE OR REPLACE PROCEDURE get_country_count (p_reg_id countries.region_id%TYPE, p_elev countries.highest_elevation%TYPE)
     IS
@@ -148,6 +147,7 @@ Name your procedure find_area_pop.
 
 Modify your procedure find_area_pop to add a third OUT parameter which is the population density of the country, using the formula: density = (population / area). 
 You will need to modify your SELECT statement to fetch the area column value into a local variable.
+
 
     CREATE OR REPLACE PROCEDURE find_area_pop (p_c_id IN countries.country_id%TYPE,
                                                p_c_name OUT countries.country_name%TYPE,
@@ -230,6 +230,7 @@ Test your procedure from an anonymous block three times, using integer values 4,
 
 Test find_area_pop procedure passing the four parameters using named notation. 
 Test your block using country_id 2 (Canada).
+
 
     CREATE OR REPLACE PROCEDURE find_area_pop (p_c_id IN countries.country_id%TYPE,
                                                p_c_name OUT countries.country_name%TYPE,

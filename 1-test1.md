@@ -3,6 +3,7 @@ Which of the following PL/SQL blocks executes successfully?
 
 1)
 
+<<<<<<< HEAD
     BEGIN
     END;
 
@@ -116,7 +117,6 @@ Execute your block three times using United States of America, French Republic, 
             where country_name = target_name;
             dbms_output.put_line('Lowest: '||low_elev||'; Highest: '|| high_elev);
         END;
-
 ---
 
 # 5.
@@ -233,7 +233,6 @@ retrieving data that you learned in this lesson.
         WHERE country_name = v_country_name;
         DBMS_OUTPUT.PUT_LINE('The lowest elevation in '|| v_country_name || ' is ' || v_lowest_elevation || ' and the highest elevation is ' || v_highest_elevation || '.');
     END;
-
 ---
 
 # 10.

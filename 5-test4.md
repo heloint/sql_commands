@@ -29,7 +29,6 @@ Use bind variables to inform country_id.
 
 ## 2. 
 Modify the code from the previous exercise so that it handles all the following cases:
-
 A. Population is greater than 1 billion.
 
 B. Population is greater than 0.
@@ -162,7 +161,6 @@ Examine the following code. What output do you think it will produce?
             DBMS_OUTPUT.PUT_LINE('The two numbers are equal');
         END IF;
     END;
-
 b.
 The two numbers are equal
 
@@ -485,4 +483,3 @@ The program also should show how many prime numbers have been found.
         -- Print out the total of prime numbers.
         DBMS_OUTPUT.PUT_LINE('Total number of prime numbers: '||v_counter||'.');
     END;
-
